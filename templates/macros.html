@@ -1,0 +1,14 @@
+{% macro nav()%}
+     <nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="topnav" id="myTopnav">
+            <a href="{{url_for('home')}}">HOME</a>
+            <a href="{{url_for('addBook')}}">ADD A BOOK</a> 
+            <a href="{{url_for('library')}}">LIBRARY</a>
+            <a href="{{url_for('deleteBook')}}">REMOVE A BOOK</a>
+            <a href="{{url_for('filterByPrice')}}"><i class="fa-solid fa-filter"></i></a>
+        </div>   
+    </nav>
+{%endmacro%}

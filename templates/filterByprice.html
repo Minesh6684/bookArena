@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+    <form method="post" class="priceFilter">
+        <div class="filter-row">
+            <label for="priceMin">Minimum Price:</label>
+            <input type="number" min="0" class="form-row" name="priceMin" value="0">
+        </div>
+        <div class="filter-row">
+            <label for="priceMax">Maximum Price:</label>
+            <input type="number" min="1" class="form-row" name="priceMax" value="0">
+        </div>
+        <input type="submit" value="Search" class="filterSubmit">
+    </form>
+{% endblock %}

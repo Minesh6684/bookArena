@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    position: sticky; /* Keeping the position of nav bar sticky while scrolling different phases in the viewport. */
+    top: 0; /* Keeping the nav bar to the top of the viewport. */
+    z-index: 1;
+}
+
+nav  span, a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin: 20px;
+}
+
+main {
+    background-color: white;
+    width: 100%;
+    min-height: 76.8vh;
+    max-height: 76.8vh;
+    overflow-y: scroll;
+}
+.searchForm {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid red; */
+    padding: 250px 0px 0px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.searchForm .text {
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    width: 70%;
+    line-height: 30px;
+    font-size: medium
+}
+
+.searchForm .text:hover {
+    font-size: large;
+    transition: 0.25s font-size ease-in-out;
+}
+
+.searchForm .submit {
+    background-color: rgb(170, 170, 170);
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* line-height: 10px; */
+    width: 15%;
+    padding: 10px 15px;
+    font-size: small;
+}
+
+.searchForm .submit:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    transition: 0.15s font-size ease-in;
+}
+
+/* addBook.html styling */
+
+.addBook {
+    width: 60%;
+    margin: auto;
+    padding: 10%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addBook div{
+    margin-bottom: 15px;
+}
+
+.addBook label {
+    font-size: 24px;
+}
+
+.addBook input, textarea {
+    font-size: 20px;
+    float: right;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 60%;
+} 
+
+.addBox {
+    display: block;
+    position: relative;
+    top: 30px;
+    width: 10%;
+}
+
+.addBox:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* deleteBook.html  styling*/
+.deleteForm {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10% auto;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.deleteName {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.del {
+    display: flex;
+    flex-direction: column;
+}
+
+.deleteSubmit {
+    height: 30px;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.deleteSubmit:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Filter By Price */
+.priceFilter {
+    width: 70%;
+    margin: auto;
+    padding: 10%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.priceFilter div{
+    margin-bottom: 15px;
+}
+
+.priceFilter label {
+    font-size: 24px;
+}
+
+.priceFilter input {
+    font-size: 20px;
+    float: right;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.filterSubmit {
+    display: block;
+    position: relative;
+    top: 30px;
+    width: 10%;
+}
+
+.filterSubmit:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Book Collection */
+
+.bookInfo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 15px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.bookInfo ul {
+    list-style-type: none;
+}
+
+.bookInfo li span{
+    color: rgb(189, 40, 13);
+    margin-right: 10px;
+}
+
+.form-row input {
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    height: 15vh;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer h3{
+    padding: 20px 10px;
+}
+
+footer hr{
+    margin-bottom: 10px;
+}
+
+/* Error Message */
+
+.errorMessage {
+    color: black;
+    width: 50%;
+    margin: auto;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 200px;
+}
+
+nav {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav {
+    display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .searchForm {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .searchForm .text {
+        width: 90%;
+    }
+
+    .searchForm .submit {
+        margin-top: 30px;
+        width: 20%;
+    }
+
+    .addBook {
+        width: 90%;
+        margin: 0 auto;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .form-row {
+        width: 100%;
+    }
+
+    .deleteForm {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10% auto;
+        font-size: 20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .del {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .deleteName {
+        width: 60%;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+    
+    .deleteSubmit {
+        height: 30px;
+        width: 30%;
+        margin-top: 15px;
+    }
+
+    .priceFilter {
+        width: 90%;
+        margin: 0 auto;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .filter-row {
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 67px;
+    border-radius: 10px;
+    width: 170%;
+  }
+
+  .topnav.responsive a {
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+    .deleteForm {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10% auto;
+        font-size: 20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    .deleteName {
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+    
+    .deleteSubmit {
+        height: 30px;
+        width: 40%;
+        margin-top: 15px;
+    }
+}
+ @media only screen and (max-width: 600px) {
+
+    .priceFilter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-row {
+        display: flex;
+        flex-direction: column;
+    }
+ }

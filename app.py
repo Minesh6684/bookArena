@@ -31,17 +31,18 @@ def home():
         through resultBySearch.html template
         """
         search_keyword = request.form['search_keyword']
-        search_keyword_title =  Books.query.filter(Books.title == search_keyword).all()
-        search_keyword_author =  Books.query.filter(Books.author == search_keyword).all()
-        search_keyword_genre =  Books.query.filter(Books.genre == search_keyword).all()
-
+        # return Books.title
+        search_keyword_title = Books.query.filter(Books.title.like(f"%{search_keyword}%")).all()
+        search_keyword_author =  Books.query.filter(Books.author.like(f"%{search_keyword}%")).all()
+        search_keyword_genre =  Books.query.filter(Books.genre.like(f"%{search_keyword}%")).all()
+ 
         if search_keyword_title:
             return render_template('library.html', books=search_keyword_title)
     
         elif search_keyword_author:
             return render_template('library.html', books=search_keyword_author)
         
-        elif search_keyword_genre:
+        else:
             return render_template('library.html', books=search_keyword_genre)
 
 
@@ -127,3 +128,6 @@ def deleteBook():
         db.session.delete(data)
         db.session.commit()
         return redirect(url_for('library'))
+
+if __name__ == '__main__':
+    app.run()

@@ -17,7 +17,7 @@ a:hover {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: black;
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -234,22 +234,22 @@ footer hr{
 /* Error Message */
 
 .errorMessage {
+    display: flex;
     color: black;
-    width: 50%;
-    margin: auto;
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    margin: 0 20px;
+    margin-top: 100px;
     text-align: center;
-    padding: 200px;
 }
 
 nav {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .topnav a {
@@ -277,7 +277,7 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
-  .topnav {
+    .topnav {
     display: none;
     }
 
@@ -346,23 +346,23 @@ nav {
     .filter-row {
         width: 100%;
     }
+
+    .topnav.responsive {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 67px;
+        right: 0;
+        border-radius: 10px;
+        width: 400%;
+        height: 90vh;
+    }
+    
+    .topnav.responsive a {
+      margin: 2px;
+    }
    
-}
-
-@media screen and (max-width: 900px) {
-  .topnav.responsive {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 67px;
-    border-radius: 10px;
-    width: 170%;
-  }
-
-  .topnav.responsive a {
-    margin: 2px;
-  }
 }
 
 @media only screen and (max-width: 500px) {
